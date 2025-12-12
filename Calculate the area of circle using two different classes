@@ -1,0 +1,39 @@
+/**
+ * Circle.java
+ * Represents a circle with a radius.
+ */
+public class Circle {
+    
+    // Private access modifier ensures the radius can only be
+    // changed via the provided public setter methods (encapsulation).
+    private double radius;
+
+    // --- Constructor ---
+    // Constructor to initialize the object with a given radius.
+    public Circle(double radius) {
+        // Use the setter for validation if needed, but here we set directly.
+        this.radius = radius;
+    }
+
+    // --- Default Constructor (Optional but good practice) ---
+    public Circle() {
+        this.radius = 0.0;
+    }
+
+    // --- Getter (Accessor) ---
+    // Public method to retrieve the value of the radius.
+    public double getRadius() {
+        return radius;
+    }
+
+    // --- Setter (Mutator) ---
+    // Public method to set a new value for the radius.
+    public void setRadius(double newRadius) {
+        // Optional: Add validation logic (e.g., ensure radius is non-negative)
+        if (newRadius >= 0) {
+            this.radius = newRadius;
+        } else {
+            System.err.println("Error: Radius cannot be negative. Value not changed.");
+        }
+    }
+}
